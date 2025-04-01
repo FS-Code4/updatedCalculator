@@ -1,0 +1,19 @@
+.calculator-grid {
+    height: auto;
+    width: 160px;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(5,1fr) ;
+    border: 2px red solid;
+    padding: 8px;
+    margin: 16px auto;
+}
+
+.number, .operator, .equals-sign {
+    border: 1px solid black;
+}
+
+.clear-container, .result-container {
+    border: 1px solid black;
+}
+
