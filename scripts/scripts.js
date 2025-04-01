@@ -18,7 +18,30 @@ export function calculate(x, y, operator) {
     return result;
 }
 
-console.log(calculate(1, 2, '+'))
-console.log(calculate(5, 4, '-'))
-console.log(calculate(5, 5, '*'))
-console.log(calculate(20, 2, '/'))
+//Make display
+
+let resultDisplay;
+
+function updateDisplay() {
+    let buttons = document.querySelectorAll('.js-display');
+
+    resultDisplay = document.querySelector('.result-display');
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            resultDisplay.textContent += button.textContent
+        })
+    })
+}
+
+function clear() {
+    let clear = document.querySelector('.js-clear');
+
+    clear.addEventListener('click', () => {
+        resultDisplay.textContent = '';
+        console.log(resultDisplay.textContent)
+    })
+}
+
+updateDisplay();
+clear();
