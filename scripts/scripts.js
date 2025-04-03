@@ -73,10 +73,14 @@ function handleNumberClick() {
 function equals() {
     equalsButtton.addEventListener('click', () => {
         let result = calculate(parseInt(num1), parseInt(num2), operator);
-        console.log(result)
         resultDisplay.textContent = result;
+        num1 = result;
+        num2 = 0;
     })
 }
+
+//Handle more than one number
+//if ()
 
 handleNumberClick();
 handleOperatorClick();
