@@ -3,9 +3,12 @@ let num1 = 0;
 let num2 = 0;
 let operator = '';
 
-export function calculate(num1, num2, operator) {
-    
+let numbers = document.querySelectorAll('.number');
+let ops = document.querySelectorAll('.operator');
+let equalsButtton = document.querySelector('.js-equals-sign')
 
+
+export function calculate(num1, num2, operator) {
     switch (operator) {
         case '+':
             result = num1 + num2;
@@ -19,11 +22,9 @@ export function calculate(num1, num2, operator) {
         case '/':
             result = num1 / num2;
     }
-
     return result;
 }
 
-//Make display
 
 let resultDisplay;
 
@@ -46,20 +47,9 @@ function clearDisplay() {
 
     clear.addEventListener('click', () => {
         resultDisplay.textContent = '';
-        console.log(resultDisplay.textContent)
     })
 }
 
-//
-
-let numbers = document.querySelectorAll('.number');
-let ops = document.querySelectorAll('.operator');
-let equalsButtton = document.querySelector('.js-equals-sign')
-
-//Handle number clicks
-
-
-//Handle operator clicks
 function handleOperatorClick() {
     ops.forEach((op) => {
         op.addEventListener('click', () => {
@@ -94,9 +84,6 @@ updateDisplay();
 clearDisplay();
 equals();
 
-//When a number button is pressed, it is assigned to num1
-
-//When an operator button is pressed, it is assigned to operator
 
 
 
