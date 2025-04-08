@@ -79,8 +79,7 @@ function equals() {
     })
 }
 
-//Handle more than one number
-//if ()
+
 
 handleNumberClick();
 handleOperatorClick();
